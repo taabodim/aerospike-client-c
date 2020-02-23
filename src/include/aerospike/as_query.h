@@ -37,7 +37,7 @@ extern "C" {
  *	Macro for setting setting the STRING_EQUAL predicate.
  *
  *	~~~~~~~~~~{.c}
- *	as_query_where(query, "bin1", as_string_equals("abc"));
+ *	as_query_where(&query, "bin1", as_string_equals("abc"));
  *	~~~~~~~~~~
  *
  *	@relates as_query
@@ -48,7 +48,7 @@ extern "C" {
  *	Macro for setting setting the INTEGER_EQUAL predicate.
  *
  *	~~~~~~~~~~{.c}
- *	as_query_where(query, "bin1", as_integer_equals(123));
+ *	as_query_where(&query, "bin1", as_integer_equals(123));
  *	~~~~~~~~~~
  *
  *	@relates as_query
@@ -59,7 +59,7 @@ extern "C" {
  *	Macro for setting setting the INTEGER_RANGE predicate.
  *
  *	~~~~~~~~~~{.c}
- *	as_query_where(query, "bin1", as_integer_range(1,100));
+ *	as_query_where(&query, "bin1", as_integer_range(1,100));
  *	~~~~~~~~~~
  *	
  *	@relates as_query
@@ -71,7 +71,7 @@ extern "C" {
  *	Macro for setting setting the RANGE predicate.
  *
  *	~~~~~~~~~~{.c}
- *	as_query_where(query, "bin1", as_range(LIST,NUMERIC,1,100));
+ *	as_query_where(&query, "bin1", as_range(LIST,NUMERIC,1,100));
  *	~~~~~~~~~~
  *	
  *	@relates as_query
@@ -83,7 +83,7 @@ extern "C" {
  *	Macro for setting setting the CONTAINS predicate.
  *
  *	~~~~~~~~~~{.c}
- *	as_query_where(query, "bin1", as_contains(LIST,STRING,"val"));
+ *	as_query_where(&query, "bin1", as_contains(LIST,STRING,"val"));
  *	~~~~~~~~~~
  *	
  *	@relates as_query
@@ -95,7 +95,7 @@ extern "C" {
  *	Macro for setting setting the EQUALS predicate.
  *
  *	~~~~~~~~~~{.c}
- *	as_query_where(query, "bin1", as_equals(NUMERIC,5));
+ *	as_query_where(&query, "bin1", as_equals(NUMERIC,5));
  *	~~~~~~~~~~
  *	
  *	@relates as_query
@@ -405,7 +405,7 @@ typedef struct as_query_sort_s {
  *	you will want to use a UDF to process the result set on the server.
  *	
  *	~~~~~~~~~~{.c}
- *	as_query_where(query, "bin1", as_string_equals("abc"));
+ *	as_query_where(&query, "bin1", as_string_equals("abc"));
  *	~~~~~~~~~~
  *
  *	The predicates that you can apply to a bin include:
@@ -424,7 +424,7 @@ typedef struct as_query_sort_s {
  *
  *	~~~~~~~~~~{.c}
  *	as_query_where_inita(query, 1);
- *	as_query_where(query, "bin1", as_string_equals("abc"));
+ *	as_query_where(&query, "bin1", as_string_equals("abc"));
  *	~~~~~~~~~~
  *
  *
